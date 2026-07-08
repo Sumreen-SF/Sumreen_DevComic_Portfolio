@@ -2,7 +2,7 @@
 
 An interactive, comic book style portfolio website built from scratch with HTML5, CSS3, and vanilla JavaScript. No frameworks, no templates. The site tells my story as a developer through six chapters, styled like panels and issues from a graphic novel.
 
-Live site: https://sumreen-fatima.netlify.app/ (update this if you deploy to a new domain)
+Live site: https://sumreen-sf.github.io/Sumreen_DevComic_Portfolio/
 
 ## About this project
 
