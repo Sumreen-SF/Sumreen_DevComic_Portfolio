@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sumreen's Developer Story</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%234A0E1C' stroke='%232A0A12' stroke-width='4'/%3E%3Ctext x='50' y='68' font-family='Arial, sans-serif' font-weight='900' font-size='56' fill='%23F2CDD3' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+<meta name="description" content="Sumreen's interactive comic-style developer portfolio — follow the story chapter by chapter.">
+
+<!-- Fonts: Anton for bold comic display headlines, Permanent Marker for hand-lettered speech-bubble text, Work Sans for clean readable body copy -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Permanent+Marker&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Comic chapter progress bar -->
+<div class="progress-rail" aria-hidden="true">
+  <div class="progress-fill" id="progressFill"></div>
+</div>
+
+<!-- Floating comic-tab navigation -->
+<nav class="comic-nav" id="comicNav">
+  <a href="#cover" class="nav-brand">SR<span class="nav-brand-dot">.</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Open chapter menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-tabs" id="navTabs">
+    <li><a href="#about" class="nav-tab" data-tab="1"><em>01</em>About</a></li>
+    <li><a href="#skills" class="nav-tab" data-tab="2"><em>02</em>Skills</a></li>
+    <li><a href="#projects" class="nav-tab" data-tab="3"><em>03</em>Projects</a></li>
+    <li><a href="#timeline" class="nav-tab" data-tab="4"><em>04</em>Timeline</a></li>
+    <li><a href="#resume" class="nav-tab" data-tab="5"><em>05</em>Resume</a></li>
+    <li><a href="#contact" class="nav-tab" data-tab="6"><em>06</em>Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- ============ COVER / LANDING ============ -->
+  <section class="cover" id="cover">
+    <div class="halftone-layer" aria-hidden="true"></div>
+    <div class="cover-decor cover-decor--burst" aria-hidden="true">
+      <svg viewBox="0 0 200 200"><polygon points="100,0 122,70 195,70 136,112 158,182 100,140 42,182 64,112 5,70 78,70" /></svg>
+    </div>
+    <div class="cover-decor cover-decor--ring" aria-hidden="true"></div>
+
+    <div class="cover-inner">
+      <p class="eyebrow-stamp">ISSUE №01 &mdash; ORIGIN STORY</p>
+
+      <h1 class="cover-title">
+        <span class="line">MY</span>
+        <span class="line line--accent">DEVELOPER</span>
+        <span class="line">STORY</span>
+      </h1>
+
+      <p class="cover-subtitle">Every project begins with an idea.</p>
+
+      <div class="cover-meta">
+        <p class="cover-name">SUMREEN FATIMA</p>
+        <p class="cover-role">Software Developer &middot; AI / ML Explorer</p>
+      </div>
+
+      <button class="btn-begin" id="beginReading">
+        Begin Reading <span class="arrow">&rarr;</span>
+      </button>
+    </div>
+
+    <div class="cover-portrait">
+      <div class="portrait-frame">
+        <!--
+          PROFILE PHOTO GOES HERE
+          Replace the placeholder below with:
+          <img src="images/profile.jpg" alt="Sumreen">
+          Recommended: a square photo, at least 600x600px.
+          The circular frame + halftone ring are already built —
+          just drop the image in and it will crop to the circle automatically.
+        -->
+        <div class="portrait-placeholder">
+          <img src="images/profile.png" alt="Sumreen">
+        </div>
+      </div>
+      <div class="portrait-ring" aria-hidden="true"></div>
+      <div class="bubble bubble--intro" id="introBubble">
+        <p>Hey! Welcome to my story.</p>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to Chapter 1">
+      <span>Scroll down</span>
+      <i></i>
+    </a>
+  </section>
+
+  <!-- ============ CHAPTER 1 — ABOUT ME ============ -->
+  <section class="chapter chapter--beige" id="about">
+    <div class="halftone-layer halftone-layer--dark" aria-hidden="true"></div>
+
+    <div class="chapter-head">
+      <span class="chapter-stamp">01</span>
+      <h2 class="chapter-title">About Me</h2>
+      <p class="chapter-kicker">In which our protagonist is introduced.</p>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="panel panel--tilt-l about-panel-photo">
+        <div class="panel-tape" aria-hidden="true"></div>
+        <div class="about-photo-frame">
+          <img src="images/profile1.jpeg" alt="Sumreen">
+        </div>
+        <p class="panel-caption">Panel 1 - The origin</p>
+      </div>
+
+      <div class="panel panel--tilt-r about-panel-text">
+        <div class="panel-tape" aria-hidden="true"></div>
+        <p class="drop-cap">
+          Hi, I'm Sumreen Fatima, a BS Computer Science student at COMSATS University Islamabad,
+          currently living out my "developer origin arc" as a
+          Web Development Intern. Somewhere between debugging my code at 2am and
+          training my first AI model, I fell in love with building things
+          that actually work.
+        </p>
+      </div>
+
+      <div class="bubble bubble--float bubble--about-1">
+        <p>Plot twist: I taught myself half of this.</p>
+      </div>
+
+      <div class="panel panel--tilt-r about-panel-quote">
+        <div class="panel-tape" aria-hidden="true"></div>
+        <p>
+          I'm most at home exploring <strong>AI/ML</strong> and
+          <strong>software development</strong> - shipping self-directed
+          projects, chasing internships, and showing up at regional tech
+          meetups to trade notes with other builders.
+        </p>
+      </div>
+
+      <div class="panel panel--tilt-l about-panel-list">
+        <div class="panel-tape" aria-hidden="true"></div>
+        <h3 class="panel-heading">A few running plot threads</h3>
+        <ul class="trait-list">
+          <li><span class="trait-icon">◆</span>Building end-to-end apps, solo, under real deadlines</li>
+          <li><span class="trait-icon">◆</span>Actively hunting AI/ML &amp; dev internships</li>
+          <li><span class="trait-icon">◆</span>Active in tech communities &amp; my university tech projects</li>
+          <li><span class="trait-icon">◆</span>Determined to learn in public - one project, one bug, one deploy at a time</li>
+        </ul>
+      </div>
+
+      <div class="bubble bubble--float bubble--about-2">
+        <p>To be continued in Chapter 2 &rarr;</p>
+      </div>
+
+    </div>
+
+    <a href="#skills" class="chapter-next">Next: Chapter 2 — Skills <span class="arrow">&rarr;</span></a>
+  </section>
+
+  <!-- ============ CHAPTER 2 — SKILLS ============ -->
+  <section class="chapter chapter--wine" id="skills">
+    <div class="halftone-layer" aria-hidden="true"></div>
+
+    <div class="chapter-head">
+      <span class="chapter-stamp">02</span>
+      <h2 class="chapter-title">Skills</h2>
+      <p class="chapter-kicker">Every hero collects a few power-ups along the way.</p>
+      <p class="skills-headline">"AI Intern &middot; Web Intern &middot; CS Student &middot; Flutter &amp; Mobile App Developer &middot; Building AI-Integrated Apps &middot; Seeking Software/Web Development Internships"</p>
+    </div>
+
+    <!-- Fun animated marquee banner -->
+    <div class="skills-marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>HTML</span><span class="dot">★</span>
+        <span>CSS</span><span class="dot">★</span>
+        <span>JAVASCRIPT</span><span class="dot">★</span>
+        <span>FLUTTER</span><span class="dot">★</span>
+        <span>DART</span><span class="dot">★</span>
+        <span>PYTHON</span><span class="dot">★</span>
+        <span>AI / ML</span><span class="dot">★</span>
+        <span>GIT</span><span class="dot">★</span>
+        <span>SQL</span><span class="dot">★</span>
+        <span>REST APIs</span><span class="dot">★</span>
+        <span>HTML</span><span class="dot">★</span>
+        <span>CSS</span><span class="dot">★</span>
+        <span>JAVASCRIPT</span><span class="dot">★</span>
+        <span>FLUTTER</span><span class="dot">★</span>
+        <span>DART</span><span class="dot">★</span>
+        <span>PYTHON</span><span class="dot">★</span>
+        <span>AI / ML</span><span class="dot">★</span>
+        <span>GIT</span><span class="dot">★</span>
+        <span>SQL</span><span class="dot">★</span>
+        <span>REST APIs</span><span class="dot">★</span>
+      </div>
+    </div>
+
+    <h3 class="skills-subhead">Technical Skills</h3>
+
+    <div class="skill-filters" id="skillFilters" role="tablist" aria-label="Filter skills by category">
+      <button class="filter-chip active" data-filter="all">All</button>
+      <button class="filter-chip" data-filter="frontend">Frontend &amp; Web</button>
+      <button class="filter-chip" data-filter="ai">AI / ML</button>
+      <button class="filter-chip" data-filter="mobile">Mobile Dev</button>
+      <button class="filter-chip" data-filter="languages">Languages</button>
+      <button class="filter-chip" data-filter="tools">Tools &amp; Version Control</button>
+    </div>
+
+    <ul class="skill-grid" id="skillGrid">
+      <li class="skill-badge" data-category="frontend"><span class="badge-icon">◆</span>HTML</li>
+      <li class="skill-badge" data-category="frontend"><span class="badge-icon">◆</span>CSS</li>
+      <li class="skill-badge" data-category="frontend"><span class="badge-icon">◆</span>JavaScript</li>
+      <li class="skill-badge" data-category="frontend"><span class="badge-icon">◆</span>Client-Side Development</li>
+      <li class="skill-badge" data-category="frontend"><span class="badge-icon">◆</span>Front-End Design</li>
+      <li class="skill-badge" data-category="frontend"><span class="badge-icon">◆</span>Web Development</li>
+      <li class="skill-badge" data-category="frontend"><span class="badge-icon">◆</span>PHP</li>
+      <li class="skill-badge" data-category="frontend tools"><span class="badge-icon">◆</span>REST APIs</li>
+      <li class="skill-badge" data-category="frontend tools"><span class="badge-icon">◆</span>Netlify</li>
+
+      <li class="skill-badge" data-category="ai"><span class="badge-icon">✦</span>Artificial Intelligence (AI)</li>
+      <li class="skill-badge" data-category="ai"><span class="badge-icon">✦</span>Machine Learning</li>
+      <li class="skill-badge" data-category="ai mobile"><span class="badge-icon">✦</span>TFLite</li>
+      <li class="skill-badge" data-category="ai languages"><span class="badge-icon">✦</span>Python</li>
+
+      <li class="skill-badge" data-category="mobile"><span class="badge-icon">▲</span>Flutter</li>
+      <li class="skill-badge" data-category="mobile languages"><span class="badge-icon">▲</span>Dart</li>
+      <li class="skill-badge" data-category="mobile tools"><span class="badge-icon">▲</span>Android Studio</li>
+      <li class="skill-badge" data-category="mobile"><span class="badge-icon">▲</span>Mobile Application Development</li>
+
+      <li class="skill-badge" data-category="languages"><span class="badge-icon">●</span>Java</li>
+      <li class="skill-badge" data-category="languages"><span class="badge-icon">●</span>C++</li>
+      <li class="skill-badge" data-category="languages tools"><span class="badge-icon">●</span>SQL</li>
+      <li class="skill-badge" data-category="tools"><span class="badge-icon">●</span>SQLite</li>
+
+      <li class="skill-badge" data-category="tools"><span class="badge-icon">■</span>Git</li>
+      <li class="skill-badge" data-category="tools"><span class="badge-icon">■</span>GitHub</li>
+      <li class="skill-badge" data-category="tools"><span class="badge-icon">■</span>Microsoft Visual Studio Code</li>
+    </ul>
+
+    <div class="bubble bubble--float bubble--skills" id="skillsBubble">
+      <p>Tap a tab — powers sort themselves!</p>
+    </div>
+
+    <h3 class="skills-subhead skills-subhead--spaced">Beyond the Code</h3>
+
+    <div class="beyond-grid">
+      <div class="panel panel--tilt-l beyond-panel">
+        <div class="panel-tape" aria-hidden="true"></div>
+        <h4 class="panel-heading">Soft Skills</h4>
+        <ul class="trait-list">
+          <li><span class="trait-icon">◆</span>Communication</li>
+          <li><span class="trait-icon">◆</span>Creativity</li>
+          <li><span class="trait-icon">◆</span>Organization</li>
+          <li><span class="trait-icon">◆</span>Team Work</li>
+          <li><span class="trait-icon">◆</span>Leadership</li>
+        </ul>
+      </div>
+
+      <div class="panel panel--tilt-r beyond-panel">
+        <div class="panel-tape" aria-hidden="true"></div>
+        <h4 class="panel-heading">Interests</h4>
+        <ul class="trait-list">
+          <li><span class="trait-icon">✦</span>AI / ML</li>
+          <li><span class="trait-icon">✦</span>Arts &amp; Crafts</li>
+          <li><span class="trait-icon">✦</span>Designing</li>
+          <li><span class="trait-icon">✦</span>Exploring new cultures &amp; foods</li>
+          <li><span class="trait-icon">✦</span>Language learning</li>
+        </ul>
+      </div>
+
+      <div class="panel panel--tilt-l beyond-panel">
+        <div class="panel-tape" aria-hidden="true"></div>
+        <h4 class="panel-heading">Hobbies</h4>
+        <ul class="trait-list">
+          <li><span class="trait-icon">●</span>Watching K-dramas</li>
+          <li><span class="trait-icon">●</span>Sketching (sometimes)</li>
+          <li><span class="trait-icon">●</span>Learning cool new things</li>
+          <li><span class="trait-icon">●</span>Collecting &amp; exploring fragrances</li>
+        </ul>
+      </div>
+    </div>
+
+    <a href="#projects" class="chapter-next">Next: Chapter 3 — Projects <span class="arrow">&rarr;</span></a>
+  </section>
+
+  <section class="chapter chapter--beige" id="projects">
+    <div class="halftone-layer halftone-layer--dark" aria-hidden="true"></div>
+
+    <div class="chapter-head">
+      <span class="chapter-stamp">03</span>
+      <h2 class="chapter-title">Projects</h2>
+      <p class="chapter-kicker">Every project is its own comic issue.</p>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="panel panel--tilt-l project-card">
+        <div class="panel-tape" aria-hidden="true"></div>
+        <header class="issue-strip">
+          <span class="issue-number">Issue №01</span>
+          <span class="issue-genre">Mobile &middot; AI</span>
+        </header>
+        <h3 class="issue-title">AI Meal Planner &amp; Calorie Scanner</h3>
+        <p class="issue-tagline">Every meal, decoded from a single snapshot.</p>
+        <ul class="issue-tech">
+          <li>Flutter</li><li>Dart</li><li>ML Image Recognition</li><li>SQLite</li>
+        </ul>
+        <ul class="issue-bullets">
+          <li>Cross-platform app that generates personalized meal plans and tracks daily caloric intake.</li>
+          <li>Camera-based food recognition using a TFLite model, auto-estimating calories per item.</li>
+          <li>Offline-first design, all logs and preferences persist locally, no backend required.</li>
+        </ul>
+        <div class="issue-links">
+          <a href="https://github.com/Sumreen-SF/ai-meal-planner-calorie-scanner" target="_blank" rel="noopener">View Code &rarr;</a>
+        </div>
+      </article>
+
+      <article class="panel panel--tilt-r project-card">
+        <div class="panel-tape" aria-hidden="true"></div>
+        <header class="issue-strip">
+          <span class="issue-number">Issue №02</span>
+          <span class="issue-genre">Mobile &middot; Productivity</span>
+        </header>
+        <h3 class="issue-title">Task Manager App</h3>
+        <p class="issue-tagline">A sidekick for the chronically over-scheduled.</p>
+        <ul class="issue-tech">
+          <li>Flutter</li><li>Dart</li><li>SQLite</li><li>flutter_local_notifications</li>
+        </ul>
+        <ul class="issue-bullets">
+          <li>Full-featured task manager with subtasks, progress tracking, and recurring day-of-week schedules.</li>
+          <li>Custom local notifications with alert sounds and scheduled reminders for recurring tasks.</li>
+          <li>Light/dark theme support with fully offline, locally-persisted task data.</li>
+          <li>Custom sound selection for notifications.</li>
+        </ul>
+        <div class="issue-links">
+          <a href="https://github.com/Sumreen-SF/task-manager-app" target="_blank" rel="noopener">View Code &rarr;</a>
+        </div>
+      </article>
+
+      <article class="panel panel--tilt-l project-card">
+        <div class="panel-tape" aria-hidden="true"></div>
+        <header class="issue-strip">
+          <span class="issue-number">Issue №03</span>
+          <span class="issue-genre">Web</span>
+        </header>
+        <h3 class="issue-title">Personal Portfolio Website</h3>
+        <p class="issue-tagline">The one you're reading right now - well, the ancestor of it.</p>
+        <ul class="issue-tech">
+          <li>HTML5</li><li>CSS3</li><li>JavaScript</li>
+        </ul>
+        <ul class="issue-bullets">
+          <li>Fully responsive portfolio built from scratch - no templates, with a custom hand-coded design system.</li>
+          <li>Scroll-triggered animations and an interactive cursor throughout.</li>
+          <li>Working contact form via the Formspree API, so messages deliver with no backend needed.</li>
+        </ul>
+        <div class="issue-links">
+          <a href="https://sumreen-fatima.netlify.app/" target="_blank" rel="noopener">Live Demo &rarr;</a>
+        </div>
+      </article>
+
+      <article class="panel panel--tilt-r project-card">
+        <div class="panel-tape" aria-hidden="true"></div>
+        <header class="issue-strip">
+          <span class="issue-number">Issue №04</span>
+          <span class="issue-genre">Mobile &middot; Weather</span>
+        </header>
+        <h3 class="issue-title">SkyCast Weather App</h3>
+        <p class="issue-tagline">Weather that paints its own mood.</p>
+        <ul class="issue-tech">
+          <li>Flutter</li><li>Dart</li><li>OpenWeatherMap API</li>
+        </ul>
+        <ul class="issue-bullets">
+          <li>Weather app that re-themes its entire UI, gradients, palette, hand-painted animations - to match real-time conditions using CustomPainter, no GIF or Lottie assets.</li>
+          <li>Live conditions, 24-hour/7-day forecasts, and air quality via GPS and Geolocator-based city search.</li>
+          <li>Rule-based advisory features: outfit recommendations and study/commute alerts from real-time weather and time-of-day logic.</li>
+        </ul>
+        <div class="issue-links">
+          <a href="https://github.com/Sumreen-SF/skycast-weather-app" target="_blank" rel="noopener">View Code &rarr;</a>
+        </div>
+      </article>
+
+      <article class="panel panel--tilt-l project-card">
+        <div class="panel-tape" aria-hidden="true"></div>
+        <header class="issue-strip">
+          <span class="issue-number">Issue №05</span>
+          <span class="issue-genre">AI &middot; Internship</span>
+        </header>
+        <h3 class="issue-title">ByteBuddy</h3>
+        <p class="issue-tagline">Old-school logic, new-school charm.</p>
+        <ul class="issue-tech">
+          <li>Python</li><li>Rule-Based Logic</li>
+        </ul>
+        <ul class="issue-bullets">
+          <li>A rule-based AI chatbot that runs entirely in the terminal.</li>
+          <li>Built on System 2 logic with a fully white-box, explainable model, every response traceable to a rule.</li>
+          <li>ByteBuddy isn't your traditional and smart AI chatbot, it's a simple model that relies on predefined rules.</li>
+          <li>Task 1 of the AI Internship at DecodeLabs.</li>
+          <li>ByteBuddy - a chatbot that's very aware it's deterministic, not "smart," and isn't afraid to joke about it</li>
+        </ul>
+        <div class="issue-links">
+          <a href="https://github.com/Sumreen-SF/ByteBuddy" target="_blank" rel="noopener">View Code &rarr;</a>
+        </div>
+      </article>
+
+      <article class="panel panel--tilt-r project-card">
+        <div class="panel-tape" aria-hidden="true"></div>
+        <header class="issue-strip">
+          <span class="issue-number">Issue №06</span>
+          <span class="issue-genre">Web &middot; Gallery</span>
+        </header>
+        <h3 class="issue-title">PetalFrame</h3>
+        <p class="issue-tagline">A gallery that lets images breathe.</p>
+        <ul class="issue-tech">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li>
+        </ul>
+        <ul class="issue-bullets">
+          <li>A web-based, fully responsive image gallery.</li>
+          <li>Task 1 of the Front-End Web Development Internship at CodeAlpha.</li>
+          <li>Named filters for each category of images.</li>
+          <li>Scroll to previous and next images.</li>
+          <li>Responsive design for all screen sizes.</li>
+        </ul>
+        <div class="issue-links">
+          <a href="https://github.com/Sumreen-SF/CodeAlpha_PetalFrame" target="_blank" rel="noopener">View Code &rarr;</a>
+          <a href="https://petalframegallery.netlify.app/" target="_blank" rel="noopener">Live Demo &rarr;</a>
+        </div>
+      </article>
+
+      <article class="panel panel--tilt-l project-card">
+        <div class="panel-tape" aria-hidden="true"></div>
+        <header class="issue-strip">
+          <span class="issue-number">Issue №07</span>
+          <span class="issue-genre">Web &middot; Utility</span>
+        </header>
+        <h3 class="issue-title">Brownie Calculator</h3>
+        <p class="issue-tagline">Small tool, sweet name.</p>
+        <ul class="issue-tech">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li>
+        </ul>
+        <ul class="issue-bullets">
+          <li>A web calculator performing basic arithmetic - addition, subtraction, multiplication, division.</li>
+          <li>Task 2 of the Front-End Web Development Internship at CodeAlpha.</li>
+          <li>Using color theme, brown and butter yellow.</li>
+          <li>Responsive design for all screen sizes.</li>
+        </ul>
+        <div class="issue-links">
+          <a href="https://github.com/Sumreen-SF/CodeAlpha_Calculator" target="_blank" rel="noopener">View Code &rarr;</a>
+          <a href="https://sumreen-sf.github.io/CodeAlpha_Calculator/" target="_blank" rel="noopener">Live Demo &rarr;</a>
+        </div>
+      </article>
+
+    </div>
+
+    <a href="#timeline" class="chapter-next">Next: Chapter 4 — Timeline <span class="arrow">&rarr;</span></a>
+  </section>
+
+  <section class="chapter chapter--wine" id="timeline">
+    <div class="halftone-layer" aria-hidden="true"></div>
+
+    <div class="chapter-head">
+      <span class="chapter-stamp">04</span>
+      <h2 class="chapter-title">Timeline</h2>
+      <p class="chapter-kicker">Presenting my education and experience as a comic timeline.</p>
+    </div>
+
+    <div class="timeline-track">
+      <div class="timeline-line" aria-hidden="true"></div>
+
+      <div class="timeline-entry timeline-entry--left">
+        <div class="timeline-node" aria-hidden="true"></div>
+        <div class="panel timeline-card">
+          <div class="panel-tape" aria-hidden="true"></div>
+          <span class="timeline-tag timeline-tag--exp">Experience</span>
+          <h3 class="timeline-role">Frontend Developer</h3>
+          <p class="timeline-org">CodeAlpha &middot; Internship &middot; Remote</p>
+          <p class="timeline-dates">Jul 2026 &ndash; Present</p>
+          <p class="timeline-desc">Building front-end web experiences with a real tech stack and real deadlines.</p>
+          <ul class="issue-tech">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-entry timeline-entry--right">
+        <div class="timeline-node" aria-hidden="true"></div>
+        <div class="panel timeline-card">
+          <div class="panel-tape" aria-hidden="true"></div>
+          <span class="timeline-tag timeline-tag--exp">Experience</span>
+          <h3 class="timeline-role">Artificial Intelligence Intern</h3>
+          <p class="timeline-org">Decodelabs &middot; Internship &middot; Remote</p>
+          <p class="timeline-dates">Jun 2026 &ndash; Present</p>
+          <p class="timeline-desc">Applying Python and AI fundamentals to real engineering tasks, starting with ByteBuddy, a terminal-based rule-based chatbot.</p>
+          <ul class="issue-tech">
+            <li>Python</li><li>Artificial Intelligence</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-entry timeline-entry--left">
+        <div class="timeline-node" aria-hidden="true"></div>
+        <div class="panel timeline-card">
+          <div class="panel-tape" aria-hidden="true"></div>
+          <span class="timeline-tag timeline-tag--edu">Education</span>
+          <h3 class="timeline-role">BS Computer Science</h3>
+          <p class="timeline-org">COMSATS University Islamabad</p>
+          <p class="timeline-dates">Feb 2024 &ndash; Jan 2028 (Expected)</p>
+          <p class="timeline-desc">CGPA 3.90 / 4.0. The main arc where everything else in this story began.</p>
+          <ul class="issue-tech">
+            <li>Programming Fundamentals</li>
+            <li>Data Structures</li>
+            <li>OOP</li>
+            <li>Operating Systems</li>
+            <li>Computer Networks</li>
+            <li>DBMS</li>
+            <li>Algorithms</li>
+            <li>Web Technologies</li>
+            <li>Mobile App Development</li>
+            <li>Artificial Intelligence</li>
+            <li>Information Security</li>
+            <li>Software Engineering</li>
+            <li>Computer Organization &amp; Assembly Language</li>
+            <li>Applications of ICT</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-entry timeline-entry--right">
+        <div class="timeline-node" aria-hidden="true"></div>
+        <div class="panel timeline-card">
+          <div class="panel-tape" aria-hidden="true"></div>
+          <span class="timeline-tag timeline-tag--edu">Education</span>
+          <h3 class="timeline-role">F.Sc Pre-Medical</h3>
+          <p class="timeline-org">Government Graduate College</p>
+          <p class="timeline-dates">2022 &ndash; 2024</p>
+          <p class="timeline-desc">Plot twist: a pre-medical track that quietly redirected into computer science.</p>
+        </div>
+      </div>
+
+      <div class="timeline-entry timeline-entry--left">
+        <div class="timeline-node" aria-hidden="true"></div>
+        <div class="panel timeline-card">
+          <div class="panel-tape" aria-hidden="true"></div>
+          <span class="timeline-tag timeline-tag--edu">Education</span>
+          <h3 class="timeline-role">Matriculation</h3>
+          <p class="timeline-org">The Spirit School</p>
+          <p class="timeline-dates">Grade 5 &ndash; Grade 10</p>
+          <p class="timeline-desc">Six formative years of foundational schooling before the science track began.</p>
+        </div>
+      </div>
+
+      <div class="timeline-entry timeline-entry--right">
+        <div class="timeline-node" aria-hidden="true"></div>
+        <div class="panel timeline-card">
+          <div class="panel-tape" aria-hidden="true"></div>
+          <span class="timeline-tag timeline-tag--edu">Education</span>
+          <h3 class="timeline-role">Early Education</h3>
+          <p class="timeline-org">Allied Schools</p>
+          <p class="timeline-dates">Origin story</p>
+          <p class="timeline-desc">Where the very first chapter of this story was written.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="#resume" class="chapter-next">Next: Chapter 5 — Resume <span class="arrow">&rarr;</span></a>
+  </section>
+
+  <section class="chapter chapter--beige" id="resume">
+    <div class="halftone-layer halftone-layer--dark" aria-hidden="true"></div>
+
+    <div class="chapter-head">
+      <span class="chapter-stamp">05</span>
+      <h2 class="chapter-title">Resume</h2>
+      <p class="chapter-kicker">The condensed edition — for recruiters in a hurry.</p>
+    </div>
+
+    <div class="resume-wrap">
+      <div class="panel resume-card">
+        <div class="panel-tape" aria-hidden="true"></div>
+
+        <div class="resume-top">
+          <div>
+            <h3 class="resume-name">Sumreen Fatima</h3>
+            <p class="resume-role">Software Developer &middot; AI / ML Explorer</p>
+          </div>
+          <!--
+            RESUME PDF: drop your resume file at assets/Sumreen-Fatima-Resume.pdf
+            and this button will download it.
+          -->
+          <a class="btn-begin btn-begin--sm resume-download" href="assets/Sumreen-Fatima-Resume.pdf" download>
+            Download Resume <span class="arrow">&darr;</span>
+          </a>
+        </div>
+
+        <p class="resume-contact">
+          Punjab, Pakistan &middot;
+          <a href="mailto:fatimasumreen08@gmail.com">fatimasumreen08@gmail.com</a> &middot;
+          <a href="https://www.linkedin.com/in/sumreen-fatima-sf08" target="_blank" rel="noopener">LinkedIn</a> &middot;
+          <a href="https://github.com/Sumreen-SF" target="_blank" rel="noopener">GitHub</a> &middot;
+          <a href="https://sumreen-fatima.netlify.app/" target="_blank" rel="noopener">Netlify</a>
+        </p>
+
+        <div class="resume-grid">
+          <div class="resume-block">
+            <h4 class="panel-heading">Education</h4>
+            <p class="resume-line"><strong>BS Computer Science</strong><br>COMSATS University Islamabad</p>
+            <p class="resume-sub">Feb 2024 &ndash; Jan 2028 (Expected) &middot; CGPA 3.90/4.0</p>
+          </div>
+
+          <div class="resume-block">
+            <h4 class="panel-heading">Experience</h4>
+            <p class="resume-line"><strong>Frontend Developer</strong><br>CodeAlpha &middot; Jul 2026 &ndash; Present</p>
+            <p class="resume-line"><strong>Artificial Intelligence Intern</strong><br>Decodelabs &middot; Jun 2026 &ndash; Present</p>
+          </div>
+
+          <div class="resume-block resume-block--full">
+            <h4 class="panel-heading">Key Skills</h4>
+            <ul class="issue-tech">
+              <li>Flutter</li><li>Dart</li><li>Python</li><li>JavaScript</li>
+              <li>HTML / CSS</li><li>SQL</li><li>Git &amp; GitHub</li><li>Artificial Intelligence</li>
+            </ul>
+          </div>
+
+          <div class="resume-block resume-block--full">
+            <h4 class="panel-heading">Featured Projects</h4>
+            <p class="resume-line">AI Meal Planner &amp; Calorie Scanner &middot; Task Manager App &middot; SkyCast Weather App &middot; Personal Portfolio Website</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#contact" class="chapter-next">Next: Chapter 6 — Contact <span class="arrow">&rarr;</span></a>
+  </section>
+
+  <section class="chapter chapter--wine" id="contact">
+    <div class="halftone-layer" aria-hidden="true"></div>
+
+    <div class="chapter-head">
+      <span class="chapter-stamp">06</span>
+      <h2 class="chapter-title">Contact</h2>
+      <p class="chapter-kicker">Every story needs a way to reach the author.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="panel contact-form-panel">
+        <div class="panel-tape" aria-hidden="true"></div>
+        <h3 class="panel-heading">Send a Message</h3>
+
+        <!--
+          FORM BACKEND: this points at a placeholder Formspree endpoint.
+          1. Create a free form at https://formspree.io
+          2. Replace YOUR_FORM_ID below with the ID Formspree gives you
+          Until then, submissions will fail gracefully with an error message.
+        -->
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label class="form-field">
+            <span>Name</span>
+            <input type="text" name="name" required>
+          </label>
+          <label class="form-field">
+            <span>Email</span>
+            <input type="email" name="email" required>
+          </label>
+          <label class="form-field">
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn-begin btn-begin--sm" id="contactSubmit">
+            Send <span class="arrow">&rarr;</span>
+          </button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+
+      <div class="panel contact-links-panel">
+        <div class="panel-tape" aria-hidden="true"></div>
+        <h3 class="panel-heading">Find Me Elsewhere</h3>
+        <ul class="contact-links">
+          <li>
+            <a href="mailto:fatimasumreen08@gmail.com">
+              <span class="contact-icon">&#9993;</span> fatimasumreen08@gmail.com
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/sumreen-fatima-sf08" target="_blank" rel="noopener">
+              <span class="contact-icon">in</span> LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Sumreen-SF" target="_blank" rel="noopener">
+              <span class="contact-icon">&lt;/&gt;</span> GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://sumreen-fatima.netlify.app/" target="_blank" rel="noopener">
+              <span class="contact-icon">&#9679;</span> Live Portfolio
+            </a>
+          </li>
+        </ul>
+
+        <div class="bubble bubble--float bubble--contact in-view">
+          <p>Thanks for reading all the way here!</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="the-end">— The End, for now —</p>
+  </section>
+
+</main>
+
+<!-- Secret bonus panel — Easter egg, press "C" anywhere on the page -->
+<div class="secret-page" id="secretPage" aria-hidden="true">
+  <div class="secret-inner">
+    <p class="secret-stamp">BONUS PANEL — UNLOCKED</p>
+    <p>You found the hidden page. That's the kind of curiosity I put into every project. ✦</p>
+    <button class="btn-begin btn-begin--sm" id="closeSecret">Close</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
